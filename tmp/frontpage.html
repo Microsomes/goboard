@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+</head>
+<body>
+
+    <nav>
+        <li><a href="/">Maeplet Board- Home of cringe </a></li>
+    </nav>
+
+
+    <!-----container 1----->
+    <div class="container">
+    <h1>Maeplet board</h1>
+    <p>A freedom of speech</p>
+    <p>To the hackers, you can try and DDOS me or <br>something but ive already tested 1 million connections, you aint got the power</p>
+
+    <H2>FAQ</H2>
+    <ul>
+        <li>This website is made in go</li>
+        <li>no posts will be deleted,ever not even the dark ones</li>
+        <li>yes its intentionally ugly, the main goal is to never go down</li>
+        <li>or get hacked</li>
+        <li>Posts are universally editable</li>
+    </ul>
+
+    <h3></h3>
+    </div>
+    <!----container 1 ends------------------->
+
+
+
+    <div class="container">
+    <h3>Recent/ Listing</h3>
+    <ul>
+        {{range $ele := .Listings}}
+                <li><a href="/view/{{$ele}}">{{$ele}}</a></li>
+        {{end}}
+    </ul>
+    </div>
+
+</body>
+</html>
