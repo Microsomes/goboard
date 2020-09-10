@@ -13,6 +13,7 @@ import (
 	"regexp"
 	"fmt"
 	"log"
+	"strings"
 
 )
 
@@ -121,7 +122,7 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 
 
 	for _, post:= range posts{
-		allPosts=append(allPosts,post.Name())
+		allPosts=append(allPosts,strings.Split(post.Name(),".txt")[0])
 	}
 
 
