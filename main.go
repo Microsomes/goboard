@@ -125,10 +125,10 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 		allPosts=append(allPosts,strings.Split(post.Name(),".txt")[0])
 	}
 
-
-
-
-
+	//reverse all posts- TODO make it better
+	for i, j := 0, len(allPosts)-1; i < j; i, j = i+1, j-1 {
+		allPosts[i], allPosts[j] = allPosts[j], allPosts[i]
+	}
 
 
 
